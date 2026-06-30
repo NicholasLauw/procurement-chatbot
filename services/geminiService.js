@@ -21,7 +21,7 @@ async function loadSOPs() {
  * Step 1: Extract procurement items from ticket text (no pricing yet).
  */
 async function extractItemsOnly(ticketText) {
-  const model      = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+  const model      = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
   const sopContent = await loadSOPs();
 
   const prompt = `Kamu adalah asisten pengadaan barang untuk jaringan hotel. Tugasmu adalah membaca teks tiket support yang diberikan dan mengekstrak semua kebutuhan pembelian barang atau jasa yang telah DISETUJUI atau PERLU ditindaklanjuti.
